@@ -19,9 +19,9 @@ function getContacts(array $contacts): array
     }else {
         foreach($contacts as $contact){
             echo "
-                Name: {$contacts ['name']};
-                Email: {$contacts ['email']};
-                Phone: {$contacts ['phone']} \n;
+                Name: {$contact ['name']};
+                Email: {$contact ['email']};
+                Phone: {$contact ['phone']};\n
             ";
         }
     }
@@ -49,9 +49,6 @@ while(true) {
         echo "Contact added successfully! \n";
     } elseif($choose === 2) {
         $result = getContacts($contacts);
-        if(isset($result['message'])) {
-            echo $result['message'] . "\n";
-        }
     } elseif($choose === 3) {
         echo "Exiting the app. Goodbye! \n";
         break;
